@@ -1,0 +1,376 @@
+/* =========================================================
+   GENERAL STYLES - جميع صفحات المشروع
+========================================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 40px auto;
+    background: transparent;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.small-container {
+    max-width: 700px;
+    width: 95%;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    color: #333;
+    outline: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+}
+
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+body:not(.home-page) .btn,
+body:not(.home-page) button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+}
+
+body:not(.home-page) .btn:last-child,
+body:not(.home-page) button:last-child {
+    margin-right: 0;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-danger {
+    background: #dc2626;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 12px;
+}
+
+table td {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+table th {
+    background: #2563eb;
+    color: white;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    margin-right: 10px;
+}
+
+/* =========================================================
+   access-denied.html
+========================================================= */
+
+body.access-denied-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.access-denied-page .access-box {
+    width: 550px;
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 50px 40px;
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.20);
+}
+
+body.access-denied-page .access-box h1 {
+    color: #dc2626;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+body.access-denied-page .access-box p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+body.access-denied-page .access-box .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   index.html
+   يتطلب:
+   <body class="home-page">
+========================================================= */
+
+body.home-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f9;
+}
+
+body.home-page .container {
+    width: 370px;
+    height: 480px;
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px 30px 30px 30px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body.home-page h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+body.home-page p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+body.home-page .nav-links {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body.home-page .btn,
+body.home-page button.btn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+body.home-page .logout-form {
+    width: 100%;
+    margin: 0;
+}
+
+body.home-page .btn:hover,
+body.home-page button.btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+body.home-page .nav-links a {
+    margin-right: 0;
+}
+
+/* =========================================================
+   PAGE STRUCTURE REFERENCE
+========================================================= */
+
+/*
+products/list.html
+- .container
+- h1
+- table
+- .btn
+- .btn-secondary
+- .btn-danger
+
+products/form.html
+- .container
+- .small-container
+- h1
+- label
+- input
+- textarea
+- select
+- .btn
+- .btn-secondary
+- .form-actions
+
+products/view.html
+- .container
+- h1
+- .card
+- .btn
+- .btn-secondary
+- .btn-danger
+
+articles/list.html
+- .container
+- h1
+- table
+- .btn
+- .btn-secondary
+- .btn-danger
+
+articles/form.html
+- .container
+- .small-container
+- h1
+- label
+- input
+- textarea
+- .btn
+- .btn-secondary
+- .form-actions
+
+articles/view.html
+- .container
+- h1
+- .card
+- .btn
+- .btn-secondary
+- .btn-danger
+
+comments/form.html
+- label
+- textarea
+- .btn
+
+login.html
+- .container
+- .small-container
+- h1
+- label
+- input
+- .btn
+- .error
+- .success
+
+access-denied.html
+- .access-box
+- .btn
+
+index.html
+- body.home-page
+- .container
+- .nav-links
+- .logout-form
+- .btn
+*/

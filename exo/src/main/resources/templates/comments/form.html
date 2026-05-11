@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="commentForm">
+    <form th:action="@{/comments/save/{articleId}(articleId=${article.id})}"
+          th:object="${comment}"
+          method="post">
+
+        <label>Author</label>
+        <input type="text" th:field="*{author}" required>
+
+        <label>Comment</label>
+        <textarea th:field="*{text}" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Add Comment</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${article.title}"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${article.title}"></h1>
+
+    <p th:text="${article.content}"></p>
+
+    <hr>
+
+    <h2>Comments</h2>
+
+    <div class="card" th:each="comment : ${article.comments}">
+        <strong th:text="${comment.author}"></strong>
+        <p th:text="${comment.text}"></p>
+
+        <a th:href="@{/comments/delete/{id}(id=${comment.id})}"
+           onclick="return confirm('Delete this comment?')">Delete</a>
+    </div>
+
+    <hr>
+
+    <h3>Add Comment</h3>
+
+    <div th:replace="comments/form :: commentForm"></div>
+
+    <a th:href="@{/articles}" class="btn btn-secondary">Back to Articles</a>
+</div>
+</body>
+</html>

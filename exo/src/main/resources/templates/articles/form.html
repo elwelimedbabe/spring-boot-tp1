@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container small-container">
+    <h1 th:text="${article.id == null ? 'Add Article' : 'Edit Article'}"></h1>
+
+    <form th:action="@{/articles/save}" th:object="${article}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label>Title</label>
+        <input type="text" th:field="*{title}" required>
+
+        <label>Content</label>
+        <textarea th:field="*{content}" rows="10" required></textarea>
+
+        <!-- أزرار الحفظ والعودة -->
+        <div class="form-actions">
+            <button type="submit" class="btn">Save</button>
+            <a th:href="@{/articles}" class="btn btn-secondary">Back</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

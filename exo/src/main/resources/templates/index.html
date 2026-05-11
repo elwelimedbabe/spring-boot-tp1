@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Blog Shop</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<!-- مهم جداً: إضافة class="home-page" -->
+<body class="home-page">
+
+
+<div class="container">
+    <h1>spring-tp-shoping</h1>
+
+    <p>
+        - Bienvenue dans mon projet Spring Boot (tp) .
+        Nome : Elweli && Num : C30778 .
+    </p>
+
+    <div class="nav-links">
+        <a th:href="@{/products}" class="btn">Products</a>
+        <a th:href="@{/articles}" class="btn">Articles</a>
+        <a th:href="@{/login}" class="btn">Login</a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

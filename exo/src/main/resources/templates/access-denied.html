@@ -1,0 +1,28 @@
+<!-- src/main/resources/templates/access-denied.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="access-denied-page">
+
+<div class="access-box">
+    <h1>Access Denied</h1>
+
+    <p>
+        Regular users are not allowed to edit or delete content.
+        Only administrators can perform this action.
+    </p>
+
+    <a href="javascript:history.back()" class="btn btn-secondary">
+        Back to Previous Page
+    </a>
+</div>
+
+</body>
+</html>
