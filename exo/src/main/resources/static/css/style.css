@@ -24,6 +24,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
 }
 
 .small-container {
@@ -36,6 +37,7 @@ h2,
 h3 {
     color: #333;
     margin-top: 0;
+    word-wrap: break-word;
 }
 
 label {
@@ -84,6 +86,8 @@ button,
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 body:not(.home-page) .btn,
@@ -111,6 +115,7 @@ body:not(.home-page) button:last-child {
     gap: 10px;
     margin-top: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 table {
@@ -167,11 +172,12 @@ table th {
 
 body.access-denied-page {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 body.access-denied-page .access-box {
@@ -185,6 +191,7 @@ body.access-denied-page .access-box {
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.35);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.20);
+    box-sizing: border-box;
 }
 
 body.access-denied-page .access-box h1 {
@@ -226,6 +233,7 @@ body.home-page {
 
 body.home-page .container {
     width: 370px;
+    max-width: 95%;
     height: 480px;
     background: transparent;
     border-radius: 30px;
@@ -239,6 +247,7 @@ body.home-page .container {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
 }
 
 body.home-page h1 {
@@ -374,3 +383,130 @@ index.html
 - .logout-form
 - .btn
 */
+
+/* =========================================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   هذا القسم يجعل الموقع متجاوبًا مع الهاتف
+   دون تغيير التصميم على الكمبيوتر
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+
+    .container,
+    .small-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .nav-links a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    body.access-denied-page {
+        padding: 15px;
+    }
+
+    body.access-denied-page .access-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    body.access-denied-page .access-box h1 {
+        font-size: 28px;
+    }
+
+    body.access-denied-page .access-box p {
+        font-size: 16px;
+    }
+
+    body.home-page {
+        padding: 15px;
+    }
+
+    body.home-page .container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        border-radius: 25px;
+    }
+
+    body.home-page h1 {
+        font-size: 30px;
+    }
+
+    body.home-page p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    body.home-page .nav-links {
+        width: 100%;
+    }
+
+    body.home-page .btn,
+    body.home-page button.btn {
+        width: 100%;
+    }
+}
