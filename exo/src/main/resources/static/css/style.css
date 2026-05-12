@@ -393,9 +393,14 @@ index.html
 @media (max-width: 768px) {
 
     body {
-        padding: 10px;
-        background-attachment: scroll;
-    }
+    padding: 10px;
+    min-height: 100vh;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
 
     .container,
     .small-container {
